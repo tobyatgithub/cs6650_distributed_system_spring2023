@@ -20,7 +20,6 @@ public class SkierServlet extends HttpServlet {
         String[] urlParts = urlPath.split("/");
         // and now validate url path and return the response status code
         // (and maybe also some value if input is valid)
-
         if (!isUrlValid(urlParts)) {
             res.setStatus(HttpServletResponse.SC_NOT_FOUND);
         } else {
@@ -35,8 +34,8 @@ public class SkierServlet extends HttpServlet {
         // TODO: validate the request url path according to the API spec
         // urlPath  = "/1/seasons/2019/day/1/skier/123"
         // urlParts = [, 1, seasons, 2019, day, 1, skier, 123]
-        if (urlParts[1] != "skiers") return false;
-        if (!urlParts[2].matches("-?\\d+(\\.\\d+)?")) return false;
+//        if (urlParts[1] != "skiers") return false;
+//        if (!urlParts[2].matches("-?\\d+(\\.\\d+)?")) return false;
 
         // same for seasons; {seasonsID}; days; {daysID}; skiers; {skiersID}
         return true;
