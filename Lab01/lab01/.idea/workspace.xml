@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="lab01:war" />
+      <artifact name="lab01:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,10 +10,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8b8098d-db08-450a-aa58-7cb5a6f373cc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/lab01.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-simple/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-simple/.idea/artifacts/lab02_simple_ear_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-simple/.idea/artifacts/lab02_simple_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-simple/.idea/artifacts/lab02_simple_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-simple/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-simple/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-simple/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-simple/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-simple/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-simple/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-simple/META-INF/application.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-simple/lab02-simple.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-simple/src/main/java/hello.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-simple/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-simple/web/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab03/lab03/.idea/artifacts/lab03_ear_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab03/lab03/.idea/artifacts/lab03_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab03/lab03/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab03/lab03/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab03/lab03/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab03/lab03/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab03/lab03/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab03/lab03/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab03/lab03/META-INF/application.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab03/lab03/lab03.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab03/lab03/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab03/lab03/web/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/lab01_war_exploded/WEB-INF/classes/SkierServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/lab01_war_exploded/WEB-INF/classes/SkierServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SkierServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SkierServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SkierServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SkierServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,24 +74,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/toby/Documents/cs6650_distributed_system_spring2023/Lab01/lab01",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/toby/Documents/cs6650_distributed_system_spring2023/Lab01/lab01&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="tomcat9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.71" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
@@ -166,7 +192,11 @@
       <updated>1674500500160</updated>
       <workItem from="1674500501214" duration="2569000" />
       <workItem from="1674508799101" duration="1010000" />
-      <workItem from="1674706229867" duration="856000" />
+      <workItem from="1674706229867" duration="887000" />
+      <workItem from="1674860194033" duration="280000" />
+      <workItem from="1674860554929" duration="1379000" />
+      <workItem from="1674861967031" duration="601000" />
+      <workItem from="1674862853208" duration="183000" />
     </task>
     <servers />
   </component>
