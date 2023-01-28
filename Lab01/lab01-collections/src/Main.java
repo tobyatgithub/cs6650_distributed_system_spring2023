@@ -1,5 +1,12 @@
 import java.util.*;
 
+class MyThread extends Thread {
+    public void run() {
+        // Code to be executed in the new thread
+    }
+}
+
+
 public class Main {
     public static void main(String[] args) {
         final int ELEMENTS_TO_ADD = 1_000_000;
@@ -37,5 +44,7 @@ public class Main {
         finish = System.currentTimeMillis();
         timeElapsed = finish - start;
         System.out.println("Time spent: " + timeElapsed + " milliseconds");
+
+        // part 3, multithread for concur map
     }
 }

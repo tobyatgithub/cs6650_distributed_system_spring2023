@@ -53,3 +53,14 @@ Intro and recap:
     - podc papers
     - aws
     - DSFP = distributed system for fun and profit (in the syllabus resource)
+
+
+### Jan. 27 2023, third lecture
+- Peter's coming next week! Microservice
+
+- 20 mins working on hw2 and hw3.
+    - metric, log, multi-thread!
+
+- Mapreduce papre
+    - They changed file system! They designed a specific file system for this map reduce work.
+    - More task specific file system shall be developed!

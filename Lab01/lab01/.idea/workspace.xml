@@ -9,20 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8b8098d-db08-450a-aa58-7cb5a6f373cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-multithread/.idea/artifacts/lab02_multithread_ear_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-multithread/.idea/artifacts/lab02_multithread_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-multithread/.idea/lab02-multithread.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-multithread/META-INF/application.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-multithread/src/main/java/RequestCounterBarrier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-multithread/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lab02/lab02-multithread/web/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lab03/lab02-multithread/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lab03/lab02-multithread/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab02/lab02-multithread/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab02/lab02-multithread/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab02/lab02-multithread/src/main/java/org/example/Main.java" beforeDir="false" />
-    </list>
+    <list default="true" id="e8b8098d-db08-450a-aa58-7cb5a6f373cc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -179,7 +166,7 @@
       <workItem from="1674860194033" duration="280000" />
       <workItem from="1674860554929" duration="1379000" />
       <workItem from="1674861967031" duration="601000" />
-      <workItem from="1674862853208" duration="1041000" />
+      <workItem from="1674862853208" duration="1112000" />
     </task>
     <servers />
   </component>
