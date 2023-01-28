@@ -5,7 +5,7 @@ import org.apache.commons.httpclient.params.HttpMethodParams;
 import java.io.IOException;
 
 public class Task implements Runnable {
-    private String url = "http://18.236.93.195:8080/lab01_war/skiers/1";
+    private String url = "http://18.236.93.195:8080/lab02-simple_war/hello";
     @Override
     public void run() {
         // Create an instance of HttpClient.
