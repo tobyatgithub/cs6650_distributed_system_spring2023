@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="lab03:war exploded" />
+      <artifact name="lab03:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,20 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ae0746f-cb97-4c7e-aa68-80e43d0b2eaf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Lab02/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lab02/.idea/Lab02.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lab02/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lab02/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/lab03_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Client/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Client/TwinderClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/lab03_ear_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/lab03_ear_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/lab03_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/lab03_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/lab03_war_exploded/WEB-INF/classes/TwinderAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/lab03_war_exploded/WEB-INF/classes/TwinderAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TwinderAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TwinderAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Client/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Client/TwinderClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client/TwinderClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Client/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Client/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Client/TwinderClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Client/TwinderClient.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +183,7 @@
       <updated>1674862409697</updated>
       <workItem from="1674862411111" duration="423000" />
       <workItem from="1674862852462" duration="179000" />
-      <workItem from="1674945419667" duration="12066000" />
+      <workItem from="1674945419667" duration="14036000" />
     </task>
     <servers />
   </component>

@@ -12,14 +12,17 @@ import java.io.IOException;
 import java.util.Random;
 
 public class Task implements Runnable {
-    private String url = "http://localhost:8080/lab03_war_exploded/TwinderAPI/swipe/";
+    private String url = "http://35.87.23.94:8080/lab03_war_exploded/TwinderAPI/";
     @Override
     public void run() {
-        SwipeApi apiInstance = new SwipeApi();
-        SwipeDetails body = new SwipeDetails(); // SwipeDetails | response details
         String leftOrRight = new Random().nextBoolean() ? "left" : "right";
         String randomSwiperId = String.valueOf(new Random().nextInt(5000-1) + 1);
         String randomSwipeeId = String.valueOf(new Random().nextInt(1000000-1) + 1);
+
+        ApiClient myClient = new ApiClient();
+        myClient.setBasePath(url);
+        SwipeApi apiInstance = new SwipeApi();
+        SwipeDetails body = new SwipeDetails(); // SwipeDetails | response details
         body.setSwiper(randomSwiperId);
         body.setSwipee(randomSwipeeId);
         body.setComment("It happens to be: " + leftOrRight);

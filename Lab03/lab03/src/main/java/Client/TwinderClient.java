@@ -9,7 +9,7 @@ public class TwinderClient {
     private static final ExecutorService executorService = Executors.newFixedThreadPool(NUM_OF_THREADS);
 
     public static void main(String[] args) {
-        int NUM_OF_CLIENTS = 2;
+        int NUM_OF_CLIENTS = 50;
         long start = System.currentTimeMillis();
         for (int i = 0; i < NUM_OF_CLIENTS; i++) {
             executorService.submit(new Task());
