@@ -1,18 +1,41 @@
 package Client;
 
+import io.swagger.client.ApiClient;
+import io.swagger.client.api.SwipeApi;
+
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+//TODO:
 public class TwinderClient {
-    private static final int NUM_OF_THREADS = 10;
+    private static final int NUM_OF_THREADS = 200;
+//    static private String url = "http://54.184.114.172:8080/lab03_war_exploded/TwinderAPI/";
+//    static private String url = "http://localhost:8080/lab03_war_exploded/TwinderAPI/";
+    static private String url = "http://54.184.114.172:8080/JavaServlet_war/twinder";
+    private static Metrics metricsTracker;
+    private int iterationNum;
     private static final ExecutorService executorService = Executors.newFixedThreadPool(NUM_OF_THREADS);
+    public TwinderClient(Metrics metricsTracker, int iterationNum, List<Metrics> metricsList) {
+//        this.metricsList = metricsList;
+        this.iterationNum = iterationNum;
+        this.metricsTracker = metricsTracker;
+    }
+
+    public static Metrics getMetricsTracker() {
+        return metricsTracker;
+    }
 
     public static void main(String[] args) {
-        int NUM_OF_CLIENTS = 50;
+        System.out.println("hello.");
+        int NUM_OF_CLIENTS = 20000;
         long start = System.currentTimeMillis();
         for (int i = 0; i < NUM_OF_CLIENTS; i++) {
-            executorService.submit(new Task());
+            ApiClient myClient = new ApiClient();
+            myClient.setBasePath(url);
+            SwipeApi apiInstance = new SwipeApi(myClient);
+            executorService.submit(new Task(i, apiInstance, metricsTracker));
         }
         executorService.shutdown();
         try {
@@ -23,5 +46,7 @@ public class TwinderClient {
         long finish = System.currentTimeMillis();
         long timeElapsed = finish - start;
         System.out.println("Time spent: " + timeElapsed + " milliseconds");
+        System.out.println("Request made: ");
+        System.out.println(metricsTracker);
     }
 }

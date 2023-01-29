@@ -12,28 +12,54 @@ import java.io.IOException;
 import java.util.Random;
 
 public class Task implements Runnable {
-    private String url = "http://35.87.23.94:8080/lab03_war_exploded/TwinderAPI/";
+    private final SwipeApi apiInstance;
+    private int iterationNum;
+    private Metrics metrics;
+
+    public Task(int iterationNum, SwipeApi apiInstance, Metrics metrics) {
+        this.iterationNum = iterationNum;
+        this.metrics = metrics;
+        this.apiInstance = apiInstance;
+    }
+
+
     @Override
     public void run() {
+        System.out.println("Running task... " + iterationNum);
         String leftOrRight = new Random().nextBoolean() ? "left" : "right";
-        String randomSwiperId = String.valueOf(new Random().nextInt(5000-1) + 1);
-        String randomSwipeeId = String.valueOf(new Random().nextInt(1000000-1) + 1);
+        String randomSwiperId = String.valueOf(new Random().nextInt(5000 - 1) + 1);
+        String randomSwipeeId = String.valueOf(new Random().nextInt(1000000 - 1) + 1);
 
-        ApiClient myClient = new ApiClient();
-        myClient.setBasePath(url);
-        SwipeApi apiInstance = new SwipeApi();
         SwipeDetails body = new SwipeDetails(); // SwipeDetails | response details
         body.setSwiper(randomSwiperId);
         body.setSwipee(randomSwipeeId);
         body.setComment("It happens to be: " + leftOrRight);
+
+
+        int count = 0;
+        int maxCount = 5;
+//        while (true) {
         try {
+//                System.out.println("hmmm");
             apiInstance.swipe(body, leftOrRight);
-//            System.out.println("hmmm");
+
             System.out.println(body);
+//                metrics.successAdd();
+//                count = 5;
         } catch (ApiException e) {
             System.err.println("Exception when calling SwipeApi#swipe");
             e.printStackTrace();
+//                System.out.println("ops");
+//            if (++count >= maxCount) {
+//                count = 0;
+//                System.err.println("Exception when calling SwipeApi#swipe");
+//                e.printStackTrace();
+////                    metrics.failAdd();
+//                return;
+//            }
         }
-
+//        metrics.requestAdd();
     }
+
 }
+
