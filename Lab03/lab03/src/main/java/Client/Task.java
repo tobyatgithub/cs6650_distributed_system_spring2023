@@ -38,28 +38,19 @@ public class Task implements Runnable {
 
         int count = 0;
         int maxCount = 5;
-//        while (true) {
-        try {
-//                System.out.println("hmmm");
-            apiInstance.swipe(body, leftOrRight);
-
-            System.out.println(body);
-//                metrics.successAdd();
-//                count = 5;
-        } catch (ApiException e) {
-            System.err.println("Exception when calling SwipeApi#swipe");
-            e.printStackTrace();
-//                System.out.println("ops");
-//            if (++count >= maxCount) {
-//                count = 0;
-//                System.err.println("Exception when calling SwipeApi#swipe");
-//                e.printStackTrace();
-////                    metrics.failAdd();
-//                return;
-//            }
+        while (true) {
+            try {
+                apiInstance.swipe(body, leftOrRight);
+                System.out.println(body);
+                return;
+            } catch (ApiException e) {
+                if (++count >= maxCount) {
+//                    count = 0;
+                    System.err.println("Exception when calling SwipeApi#swipe");
+                    e.printStackTrace();
+                    return;
+                }
+            }
         }
-//        metrics.requestAdd();
     }
-
 }
-

@@ -10,8 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ae0746f-cb97-4c7e-aa68-80e43d0b2eaf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Client/Metrics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Client/SingleClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Client/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client/Task.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Client/TwinderClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client/TwinderClient.java" afterDir="false" />
@@ -185,7 +183,7 @@
       <updated>1674862409697</updated>
       <workItem from="1674862411111" duration="423000" />
       <workItem from="1674862852462" duration="179000" />
-      <workItem from="1674945419667" duration="19312000" />
+      <workItem from="1674945419667" duration="19681000" />
     </task>
     <servers />
   </component>
