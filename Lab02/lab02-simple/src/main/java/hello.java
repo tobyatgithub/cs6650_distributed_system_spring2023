@@ -4,7 +4,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "hello", value = "/hello")
+@WebServlet(name = "hello", value = "/hello/*")
 public class hello extends HttpServlet {
     private String msg;
 
@@ -31,6 +31,7 @@ public class hello extends HttpServlet {
         // Send the response
         PrintWriter out = response.getWriter();
         out.println("<h1>" + msg + "</h1>");
+        out.flush();
     }
 
     public void destroy() {

@@ -3,7 +3,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "SkierServlet", value = "/SkierServlet")
+@WebServlet(name = "SkierServlet", value = "/SkierServlet/*")
 public class SkierServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
