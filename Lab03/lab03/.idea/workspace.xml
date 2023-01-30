@@ -10,11 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ae0746f-cb97-4c7e-aa68-80e43d0b2eaf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Client/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client/Task.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Client/TwinderClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client/TwinderClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Client/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Client/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Client/TwinderClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Client/TwinderClient.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +179,7 @@
       <updated>1674862409697</updated>
       <workItem from="1674862411111" duration="423000" />
       <workItem from="1674862852462" duration="179000" />
-      <workItem from="1674945419667" duration="19681000" />
+      <workItem from="1674945419667" duration="19935000" />
     </task>
     <servers />
   </component>

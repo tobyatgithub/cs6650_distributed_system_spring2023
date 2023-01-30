@@ -14,7 +14,7 @@ public class TwinderClient {
 //    static private String url = "http://54.184.114.172:8080/lab03_war_exploded/TwinderAPI/";
 //    static private String url = "http://localhost:8080/lab03_war_exploded/TwinderAPI/";
 
-    static private String url = "http://54.184.114.172:8080/JavaServlet_war/twinder";
+//    static private String url = "http://54.184.114.172:8080/JavaServlet_war/twinder";
     // nick's endpoint, 1-28-2023 working!
     private static Metrics metricsTracker;
     private int iterationNum;
