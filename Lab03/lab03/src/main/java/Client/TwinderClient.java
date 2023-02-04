@@ -8,19 +8,15 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-//TODO:
 public class TwinderClient {
     private static final int NUM_OF_THREADS = 200;
-//    static private String url = "http://54.184.114.172:8080/lab03_war_exploded/TwinderAPI/";
-//    static private String url = "http://localhost:8080/lab03_war_exploded/TwinderAPI/";
-
+    static private String url = "http://18.236.26.147:8080/lab03_war/TwinderAPI/";
 //    static private String url = "http://54.184.114.172:8080/JavaServlet_war/twinder";
     // nick's endpoint, 1-28-2023 working!
     private static Metrics metricsTracker;
     private int iterationNum;
     private static final ExecutorService executorService = Executors.newFixedThreadPool(NUM_OF_THREADS);
     public TwinderClient(Metrics metricsTracker, int iterationNum, List<Metrics> metricsList) {
-//        this.metricsList = metricsList;
         this.iterationNum = iterationNum;
         this.metricsTracker = metricsTracker;
     }
