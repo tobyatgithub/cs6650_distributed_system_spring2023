@@ -12,9 +12,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class TwinderClient {
     private static final int NUM_OF_THREADS = 100;
-    private static final int NUM_OF_TASKS = 10_000;
+    private static final int NUM_OF_TASKS = 1_000;
     private static final boolean PRINT = false;
-    private static final String CSV_FILENAME = "lab03_performance_100_10000.csv";
+    private static final String CSV_FILENAME = "lab03_performance_(" + NUM_OF_THREADS + "_" + NUM_OF_TASKS + ").csv";
 
     static AtomicInteger failRequestCounter = new AtomicInteger(0);
     static private String url = "http://18.236.26.147:8080/lab03_war/TwinderAPI/";
