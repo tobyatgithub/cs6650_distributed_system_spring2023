@@ -11,9 +11,10 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class TwinderClient {
-    private static final int NUM_OF_THREADS = 10;
-    private static final int NUM_OF_TASKS = 1_000;
+    private static final int NUM_OF_THREADS = 100;
+    private static final int NUM_OF_TASKS = 10_000;
     private static final boolean PRINT = false;
+    private static final String CSV_FILENAME = "lab03_performance_100_10000.csv";
 
     static AtomicInteger failRequestCounter = new AtomicInteger(0);
     static private String url = "http://18.236.26.147:8080/lab03_war/TwinderAPI/";
@@ -25,7 +26,7 @@ public class TwinderClient {
 
 
     public static void main(String[] args) throws IOException {
-        FileWriter writer = new FileWriter("lab03_performance.csv", false);
+        FileWriter writer = new FileWriter(CSV_FILENAME, false);
         writer.append("start time, request type, latency, response code\n");
 
         long start = System.currentTimeMillis();
@@ -46,10 +47,12 @@ public class TwinderClient {
         System.out.println("Time spent: " + timeElapsed + " milliseconds");
         System.out.println("Number of request made: " + NUM_OF_TASKS);
         System.out.println("Number of fail request: " + failRequestCounter.get());
+        writer.append("Total time spend, thread, total request, fail request\n");
+        writer.append(String.valueOf(timeElapsed)).append("ms, ");
+        writer.append(NUM_OF_THREADS + ", ");
+        writer.append(NUM_OF_TASKS + ", ");
+        writer.append(String.valueOf(failRequestCounter.get()));
         writer.close();
-//        System.out.println(recordTable);
-        // Write record table values to a csv
-
     }
 
 }

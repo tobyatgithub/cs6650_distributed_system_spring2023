@@ -2,6 +2,7 @@ package Client;
 
 import com.sun.tools.javac.Main;
 import io.swagger.client.ApiException;
+import io.swagger.client.ApiResponse;
 import io.swagger.client.api.SwipeApi;
 import io.swagger.client.model.SwipeDetails;
 
@@ -45,9 +46,11 @@ public class Task implements Runnable {
 
         int count = 0;
         int maxCount = 5;
+        String statusCode = "404";
         while (true) {
             try {
-                apiInstance.swipe(body, leftOrRight);
+                ApiResponse<Void> response = apiInstance.swipeWithHttpInfo(body, leftOrRight);
+                statusCode = String.valueOf(response.getStatusCode());
                 if (PRINT) {
                     System.out.println(body);
                 }
@@ -73,11 +76,7 @@ public class Task implements Runnable {
                 writer.append("POST, ");
                 writer.append(String.valueOf(timeElapsed));
                 writer.append(", ");
-                if(count == maxCount) {
-                    writer.append("404, ");
-                } else {
-                    writer.append("200, ");
-                }
+                writer.append(statusCode + ", ");
                 writer.append("\n");
                 writer.flush();
             } catch (IOException e) {
