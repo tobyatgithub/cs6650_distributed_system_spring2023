@@ -1,38 +1,35 @@
 package Client;
 
+import com.sun.tools.javac.Main;
 import io.swagger.client.ApiException;
 import io.swagger.client.api.SwipeApi;
 import io.swagger.client.model.SwipeDetails;
 
-import java.util.Hashtable;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Task implements Runnable {
-    private boolean PRINT;
+    private final FileWriter writer;
+    private final boolean PRINT;
     private final SwipeApi apiInstance;
-    private final Hashtable<String, String[]> recordTable;
-    private int iterationNum;
-    private AtomicInteger failRequestCounter;
+    private final int iterationNum;
+    private final AtomicInteger failRequestCounter;
 
-    public Task(int iterationNum, SwipeApi apiInstance, Hashtable<String, String[]> recordTable, AtomicInteger failRequestCounter, boolean PRINT) {
+    public Task(int iterationNum, SwipeApi apiInstance, AtomicInteger failRequestCounter, boolean PRINT, FileWriter writer) throws IOException {
         this.iterationNum = iterationNum;
         this.apiInstance = apiInstance;
-        this.recordTable = recordTable;
         this.failRequestCounter = failRequestCounter;
         this.PRINT = PRINT;
+        this.writer = writer;
     }
 
 
     @Override
     public void run() {
         long start = System.currentTimeMillis();
-        long threadId = Thread.currentThread().getId();
-
-        System.out.println("Thread ID = " + threadId);
-
-        recordTable.get("startTime")[(int) threadId] += Long.toString(start) + ", ";
-        recordTable.get("responseType")[(int) threadId] += "POST, ";
         if(PRINT) {
             System.out.println("Running task... " + iterationNum);
         }
@@ -54,20 +51,38 @@ public class Task implements Runnable {
                 if (PRINT) {
                     System.out.println(body);
                 }
-                recordTable.get("responseCode")[(int) threadId] += "200, ";
                 break;
             } catch (ApiException e) {
                 if (++count >= maxCount) {
                     failRequestCounter.getAndIncrement();
                     System.err.println("Exception when calling SwipeApi#swipe");
                     e.printStackTrace();
-                    recordTable.get("responseCode")[(int) threadId] += "404, ";
                     break;
                 }
             }
         }
         long finish = System.currentTimeMillis();
         long timeElapsed = finish - start;
-        recordTable.get("latency")[(int) threadId] += timeElapsed + ", ";
+
+        synchronized (Main.class) {
+            try {
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                String readableStart = dateFormat.format(start);
+                writer.append( readableStart);
+                writer.append(", ");
+                writer.append("POST, ");
+                writer.append(String.valueOf(timeElapsed));
+                writer.append(", ");
+                if(count == maxCount) {
+                    writer.append("404, ");
+                } else {
+                    writer.append("200, ");
+                }
+                writer.append("\n");
+                writer.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
