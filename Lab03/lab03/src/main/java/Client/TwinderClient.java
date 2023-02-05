@@ -11,8 +11,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class TwinderClient {
-    private static final int NUM_OF_THREADS = 100;
-    private static final int NUM_OF_TASKS = 1_000;
+    private static final int NUM_OF_THREADS = 200;
+    private static final int NUM_OF_TASKS = 500_000;
     private static final boolean PRINT = false;
     private static final String CSV_FILENAME = "lab03_performance_(" + NUM_OF_THREADS + "_" + NUM_OF_TASKS + ").csv";
 

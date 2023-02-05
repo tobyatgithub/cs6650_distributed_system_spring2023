@@ -4,6 +4,8 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 Lab03/.idea/**
 *.csv
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
 
 # User-specific stuff
 .idea/**/workspace.xml
