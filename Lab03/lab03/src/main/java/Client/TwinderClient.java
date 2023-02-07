@@ -24,7 +24,6 @@ public class TwinderClient {
     private int iterationNum;
     private static final ExecutorService executorService = Executors.newFixedThreadPool(NUM_OF_THREADS);
 
-
     public static void main(String[] args) throws IOException {
         FileWriter writer = new FileWriter(CSV_FILENAME, false);
         writer.append("start time, request type, latency, response code\n");
