@@ -15,8 +15,6 @@ Here's the notes on doing & learning Homework 4 (~ #LittlesLaw, #multithread)
 
 
 
-
-
 ### Jan. 27 2023, third lecture
 
 - Peter's coming next week! Microservice
