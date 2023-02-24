@@ -1,3 +1,5 @@
+package org.distributed;
+
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import java.io.IOException;

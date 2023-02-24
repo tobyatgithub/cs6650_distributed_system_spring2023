@@ -1,3 +1,4 @@
+package org.distributed;
 import com.google.gson.Gson;
 
 public class SwipeBody {

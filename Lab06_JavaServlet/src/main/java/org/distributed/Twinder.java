@@ -1,3 +1,5 @@
+package org.distributed;
+
 import com.google.gson.Gson;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.ConnectionFactory;
@@ -16,8 +18,8 @@ public class Twinder extends HttpServlet {
   private ConnectionFactory factory;
   private Connection connection;
   private GenericObjectPool<Channel> pool;
-  private static String QUEUE_URL = "44.224.245.65";
-//  private static String QUEUE_URL = "localhost";
+//  private static String QUEUE_URL = "44.224.245.65";
+  private static String QUEUE_URL = "localhost";
   private static String QUEUE_NAME1 = "swipe_queue1";
   private static String QUEUE_NAME2 = "swipe_queue2";
   private static String FALLOUT_EXCHANGE = "fanout_exchange";

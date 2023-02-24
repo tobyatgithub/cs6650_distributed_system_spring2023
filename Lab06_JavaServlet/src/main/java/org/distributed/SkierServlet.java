@@ -1,3 +1,4 @@
+package org.distributed;
 import java.io.BufferedReader;
 import javax.servlet.*;
 import javax.servlet.http.*;

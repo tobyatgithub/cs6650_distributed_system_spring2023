@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Lab06_JavaServlet" />
+        <module name="JavaServlet" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Lab06_JavaServlet" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
