@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ee1bd3bf-06da-44d9-b3b3-9b095acfabf3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Lab05_RabbitMQ/RabbitMQ_tutorial1/src/main/java/org/example/Recv.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab05_RabbitMQ/RabbitMQ_tutorial1/src/main/java/org/example/Send.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab05_RabbitMQ/RabbitMQ_tutorial1/src/main/java/org/example/amqp-client-5.16.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab05_RabbitMQ/RabbitMQ_tutorial1/src/main/java/org/example/slf4j-api-1.7.36.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab05_RabbitMQ/RabbitMQ_tutorial1/src/main/java/org/example/slf4j-simple-1.7.36.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_Consumer/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_Consumer/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_Consumer/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_Consumer/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_Consumer/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_Consumer/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_Consumer/amqp-client-5.16.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_Consumer/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_Consumer/slf4j-api-1.7.36.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_Consumer/slf4j-simple-1.7.36.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_Consumer/src/main/java/org/example/Consumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_Consumer/src/main/java/org/example/SwipeBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_Consumer/src/main/java/org/example/Worker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_Consumer/target/Consumer-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_Consumer/target/Consumer-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_Consumer/target/classes/org/example/Consumer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_Consumer/target/classes/org/example/SwipeBody.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_Consumer/target/classes/org/example/Worker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_Consumer/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_Consumer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_Consumer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaServlet.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ChannelFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HelloWorldServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SkierServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SwipeBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Twinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/JavaServlet-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ChannelFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/HelloWorldServlet 2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/HelloWorldServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/SkierServlet 2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/SkierServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/SwipeBody.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Twinder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2MAcx2nPK3CqdXw1E8ViZkqbG7o" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ee1bd3bf-06da-44d9-b3b3-9b095acfabf3" name="Changes" comment="" />
+      <created>1677214070281</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677214070281</updated>
+      <workItem from="1677214071514" duration="1079000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
