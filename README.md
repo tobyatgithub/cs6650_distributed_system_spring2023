@@ -4,6 +4,25 @@ Repo for the distributed system 2023 Spring at NEU.
 
 ## Class Notes
 
+### Feb.24 2023, class note.
+> Demo day on results.
+
+1. Donglin Xu's presentation (pretty cool)
+Peter:
+- when doing presentation, always explain business case (even for just 30 seconds).
+- it's good to explain the architecture and how data flows
+- when present the table, always explain what you are measuring. (and best to combine it with the graph)
+- **always exclude the error case from your performance data (otherwise the lantency will look especially good.)
+
+Peter:
+- Wheel of the week. Every week, a team will be randomly selected and present the dashboard, numbers, and the problems you see. It is not a punishedment, but rather most people enjoy it.
+- what's the throughput of the system, end-to-end (vs. throughput of the server, of the client.) e.g. how many swipe per second that gets resolved? always come to the customer perspective.
+- most often in amazon, they look at latency number most.
+- To monitor the performance, one way is the aws monitoring dashboard; another good way it logging, log in the starting time with id, and in the client side, find a way to log the completion time with the same id so you can match them up and plot.
+
+Donglin:
+- k8 server at home to do the monitoring
+
 ### Feb.04 2023, self-learning note.
 > The lecture this Friday == guest speaker Peter Smith. See the obsidian note for the take aways.
 
