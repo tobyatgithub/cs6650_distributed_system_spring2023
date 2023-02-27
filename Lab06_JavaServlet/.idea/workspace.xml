@@ -9,27 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee1bd3bf-06da-44d9-b3b3-9b095acfabf3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/lab06_server.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/distributed/amqp-client-5.16.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/distributed/slf4j-api-1.7.36.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/distributed/slf4j-simple-1.7.36.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_Consumer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_Consumer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/distributed/ChannelFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/distributed/ChannelFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/distributed/HelloWorldServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/distributed/HelloWorldServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/distributed/SkierServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/distributed/SkierServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/distributed/SwipeBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/distributed/SwipeBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/distributed/Twinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/distributed/Twinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ChannelFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/HelloWorldServlet 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/HelloWorldServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SkierServlet 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SkierServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SwipeBody.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Twinder.class" beforeDir="false" />
-    </list>
+    <list default="true" id="ee1bd3bf-06da-44d9-b3b3-9b095acfabf3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -193,6 +173,7 @@
       <workItem from="1677214071514" duration="1774000" />
       <workItem from="1677216111948" duration="1260000" />
       <workItem from="1677217408904" duration="452000" />
+      <workItem from="1677366132237" duration="166000" />
     </task>
     <servers />
   </component>

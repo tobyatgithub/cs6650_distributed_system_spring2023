@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a71befa-2930-4804-a841-3b43a67251aa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Lab06_JavaServlet/.idea/artifacts/lab06_server.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab06_JavaServlet/src/main/java/org/distributed/amqp-client-5.16.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab06_JavaServlet/src/main/java/org/distributed/slf4j-api-1.7.36.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab06_JavaServlet/src/main/java/org/distributed/slf4j-simple-1.7.36.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_JavaServlet/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_JavaServlet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/src/main/java/org/distributed/ChannelFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_JavaServlet/src/main/java/org/distributed/ChannelFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/src/main/java/org/distributed/HelloWorldServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_JavaServlet/src/main/java/org/distributed/HelloWorldServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/src/main/java/org/distributed/SkierServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_JavaServlet/src/main/java/org/distributed/SkierServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/src/main/java/org/distributed/SwipeBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_JavaServlet/src/main/java/org/distributed/SwipeBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/src/main/java/org/distributed/Twinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_JavaServlet/src/main/java/org/distributed/Twinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/target/classes/ChannelFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/target/classes/HelloWorldServlet 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/target/classes/HelloWorldServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/target/classes/SkierServlet 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/target/classes/SkierServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/target/classes/SwipeBody.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/target/classes/Twinder.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +64,7 @@
       <workItem from="1677213982824" duration="2010000" />
       <workItem from="1677216112870" duration="953000" />
       <workItem from="1677217409774" duration="451000" />
+      <workItem from="1677366133293" duration="167000" />
     </task>
     <servers />
   </component>

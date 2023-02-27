@@ -100,3 +100,14 @@ Intro and recap:
   - throughput vs. cost
   - performance vs. availability
   - need to be able to measure to discuss
+
+
+### TODO
+Make video tutorials for modular homeworks.
+- [ ] 1. Create an ec2 instance to hold tomcat.
+- [ ] 2. Create a serverlet local via intelliJ
+- [ ] 3. Hold the serverlet on ec2 tomcat
+- [ ] 4. Create an ec2 to hold rabbit mq
+- [ ] 5. Create and deploy consumer on ec2
+
+- [ ] 6. Create an ec2 to conduct load balancing
