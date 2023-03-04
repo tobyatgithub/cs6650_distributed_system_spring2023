@@ -17,9 +17,6 @@
             </goals>
           </execution>
         </executions>
-        <configuration>
-          <createDependencyReducePom>false</createDependencyReducePom>
-        </configuration>
       </plugin>
     </plugins>
   </build>

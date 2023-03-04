@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1d7d1ac4-b39f-441c-8289-762d8cccd750" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Lab06_buildServer/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_buildServer/.idea/Lab06_buildServer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_buildServer/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab06_buildServer/lab06/lab06.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/neu/cs6650/RPCServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/neu/cs6650/RPCClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/neu/cs6650/RPCServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/.idea/artifacts/lab06_server.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/JavaServlet.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/src/main/java/org/distributed/ChannelFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/src/main/java/org/distributed/HelloWorldServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/src/main/java/org/distributed/SkierServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/src/main/java/org/distributed/SwipeBody.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/src/main/java/org/distributed/Twinder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/src/main/java/org/distributed/amqp-client-5.16.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/src/main/java/org/distributed/slf4j-api-1.7.36.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/src/main/java/org/distributed/slf4j-simple-1.7.36.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/target/JavaServlet-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/target/classes/org/distributed/ChannelFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/target/classes/org/distributed/HelloWorldServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/target/classes/org/distributed/SkierServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/target/classes/org/distributed/SwipeBody.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/target/classes/org/distributed/Twinder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_JavaServlet/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/.idea/Lab06_Nick.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/Consumer/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/Consumer/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/Consumer/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/Consumer/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/Consumer/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/Consumer/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/Consumer/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/Consumer/src/main/java/Consumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/Consumer/src/main/java/SwipeBody.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/Consumer/src/main/java/Worker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/Consumer/target/Consumer-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/Consumer/target/Consumer-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/Consumer/target/classes/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/Consumer/target/classes/SwipeBody.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/Consumer/target/classes/Worker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/Consumer/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/Consumer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/Consumer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/.idea/JavaServlet.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/.idea/artifacts/JavaServlet_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/.idea/artifacts/JavaServlet_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/JavaServlet.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/src/main/java/ChannelFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/src/main/java/HelloWorldServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/src/main/java/SkierServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/src/main/java/SwipeBody.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/src/main/java/Twinder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/target/JavaServlet-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/target/classes/ChannelFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/target/classes/HelloWorldServlet 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/target/classes/HelloWorldServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/target/classes/SkierServlet 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/target/classes/SkierServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/target/classes/SwipeBody.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/target/classes/Twinder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/JavaServlet/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Nick/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_buildServer/Lab06_nick/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_buildServer/Lab06_nick/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_buildServer/Lab06_nick/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_buildServer/Lab06_nick/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_buildServer/Lab06_nick/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_buildServer/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_buildServer/Lab06_nick/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab07_Serverless/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab07_Serverless/dependency-reduced-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab07_Serverless/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab07_Serverless/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab07_Serverless/target/Lab07_Serverless-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab07_Serverless/target/Lab07_Serverless-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab07_Serverless/target/original-Lab07_Serverless-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab07_Serverless/target/original-Lab07_Serverless-1.0-SNAPSHOT.jar" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2MZHM3FKY3MUSnRnkDgvpfeEY87" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1d7d1ac4-b39f-441c-8289-762d8cccd750" name="Changes" comment="" />
+      <created>1677968132667</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677968132667</updated>
+      <workItem from="1677968133895" duration="1524000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
