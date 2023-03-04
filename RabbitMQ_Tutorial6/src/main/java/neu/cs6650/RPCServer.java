@@ -41,11 +41,14 @@ public class RPCServer {
             } catch (RuntimeException e) {
                 System.out.println(" [.] " + e);
             } finally {
+                // to publish a message to a specific exchange with a specific routing key.
                 channel.basicPublish("", delivery.getProperties().getReplyTo(), replyProps, response.getBytes("UTF-8"));
+                // to acknowledge the receipt of one or more messages by a consumer.
                 channel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
             }
         };
 
+        // register a consumer for a specific queue.
         channel.basicConsume(RPC_QUEUE_NAME, false, deliverCallback, (consumerTag -> {}));
     }
 }
