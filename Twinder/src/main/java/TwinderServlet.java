@@ -152,12 +152,10 @@ public class TwinderServlet extends HttpServlet {
 //        channel.queuePurge(RPC_QUEUE_NAME);
         channel.basicQos(1);
         System.out.println(" [x] Awaiting RPC requests");
-//        String contentString = gson.fromJson(sBuilder.toString(), JSON.class).toString();
-        String contentString = "toby here";
+        String contentString = gson.fromJson(sBuilder.toString(), JSON.class).toString();
         if (PRINT) {
             System.out.println("Gson finished, content string = " + contentString);
         }
-//        channel.basicPublish("fanout_exchange", RPC_QUEUE_NAME, null, contentString.getBytes("UTF-8"));
         channel.basicPublish("", RPC_QUEUE_NAME, null, contentString.getBytes());
         try {
             channelPool.returnObject(channel);

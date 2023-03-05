@@ -36,6 +36,22 @@
       <change afterPath="$PROJECT_DIR$/../TwinderConsumer/src/main/java/neu/cs6650/TwinderClient.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../TwinderConsumer/target/classes/neu/cs6650/Task.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../TwinderConsumer/target/classes/neu/cs6650/TwinderClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab01/lab01/target/classes/SkierServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab01/lab01/target/classes/SkierServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab02/lab02-multithread/target/classes/ClientHttp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab02/lab02-multithread/target/classes/ClientHttp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab02/lab02-multithread/target/classes/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab02/lab02-multithread/target/classes/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab02/lab02-simple/target/classes/hello.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab02/lab02-simple/target/classes/hello.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab03/lab03/target/classes/Client/Metrics.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab03/lab03/target/classes/Client/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab03/lab03/target/classes/Client/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab03/lab03/target/classes/Client/TwinderClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab03/lab03/target/classes/Client/TwinderClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab03/lab03/target/classes/TwinderAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab03/lab03/target/classes/TwinderAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab05_RabbitMQ/RabbitMQ_tutorial1/target/classes/org/example/Recv.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab05_RabbitMQ/RabbitMQ_tutorial1/target/classes/org/example/Recv.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab05_RabbitMQ/RabbitMQ_tutorial1/target/classes/org/example/Send.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab05_RabbitMQ/RabbitMQ_tutorial1/target/classes/org/example/Send.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Consumer/target/classes/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Consumer/target/classes/SwipeBody.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Consumer/target/classes/Worker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Consumer/target/classes/org/example/Consumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_Consumer/target/classes/org/example/Consumer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Consumer/target/classes/org/example/SwipeBody.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_Consumer/target/classes/org/example/SwipeBody.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab06_Consumer/target/classes/org/example/Worker.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_Consumer/target/classes/org/example/Worker.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab06_buildServer/.idea/Lab06_buildServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_buildServer/.idea/Lab06_buildServer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab06_buildServer/lab06/src/main/java/neu/cs6650/Client/TwinderClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_buildServer/lab06/src/main/java/neu/cs6650/Client/TwinderClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab06_buildServer/lab06/src/main/java/neu/cs6650/TwinderAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_buildServer/lab06/src/main/java/neu/cs6650/TwinderAPI.java" afterDir="false" />
@@ -43,7 +59,9 @@
       <change beforePath="$PROJECT_DIR$/../Lab06_buildServer/lab06/target/classes/neu/cs6650/Client/TwinderClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_buildServer/lab06/target/classes/neu/cs6650/Client/TwinderClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab06_buildServer/lab06/target/classes/neu/cs6650/TwinderAPI$ChannelFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_buildServer/lab06/target/classes/neu/cs6650/TwinderAPI$ChannelFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab06_buildServer/lab06/target/classes/neu/cs6650/TwinderAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_buildServer/lab06/target/classes/neu/cs6650/TwinderAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab07_Serverless/target/classes/neu/cs6650/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab07_Serverless/target/classes/neu/cs6650/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/neu/cs6650/RPCClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/neu/cs6650/RPCClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/neu/cs6650/RPCServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/neu/cs6650/RPCServer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
