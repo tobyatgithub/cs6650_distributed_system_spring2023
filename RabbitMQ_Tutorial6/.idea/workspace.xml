@@ -5,64 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d7d1ac4-b39f-441c-8289-762d8cccd750" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Lab06_buildServer/.idea/artifacts/test_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab06_buildServer/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab06_buildServer/web/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Twinder/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Twinder/.idea/artifacts/Twinder_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Twinder/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Twinder/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Twinder/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Twinder/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Twinder/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Twinder/Twinder.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Twinder/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Twinder/src/main/java/TwinderServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Twinder/src/main/java/neu/cs6650/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Twinder/target/classes/TwinderServlet$ChannelFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Twinder/target/classes/TwinderServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Twinder/target/classes/neu/cs6650/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Twinder/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Twinder/web/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderConsumer/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderConsumer/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderConsumer/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderConsumer/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderConsumer/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderConsumer/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderConsumer/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderConsumer/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderConsumer/src/main/java/neu/cs6650/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderConsumer/src/main/java/neu/cs6650/TwinderClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderConsumer/target/classes/neu/cs6650/Task.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderConsumer/target/classes/neu/cs6650/TwinderClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab01/lab01/target/classes/SkierServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab01/lab01/target/classes/SkierServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab02/lab02-multithread/target/classes/ClientHttp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab02/lab02-multithread/target/classes/ClientHttp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab02/lab02-multithread/target/classes/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab02/lab02-multithread/target/classes/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab02/lab02-simple/target/classes/hello.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab02/lab02-simple/target/classes/hello.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab03/lab03/target/classes/Client/Metrics.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab03/lab03/target/classes/Client/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab03/lab03/target/classes/Client/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab03/lab03/target/classes/Client/TwinderClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab03/lab03/target/classes/Client/TwinderClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab03/lab03/target/classes/TwinderAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab03/lab03/target/classes/TwinderAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab05_RabbitMQ/RabbitMQ_tutorial1/target/classes/org/example/Recv.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab05_RabbitMQ/RabbitMQ_tutorial1/target/classes/org/example/Recv.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab05_RabbitMQ/RabbitMQ_tutorial1/target/classes/org/example/Send.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab05_RabbitMQ/RabbitMQ_tutorial1/target/classes/org/example/Send.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_Consumer/target/classes/Consumer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_Consumer/target/classes/SwipeBody.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_Consumer/target/classes/Worker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_Consumer/target/classes/org/example/Consumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_Consumer/target/classes/org/example/Consumer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_Consumer/target/classes/org/example/SwipeBody.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_Consumer/target/classes/org/example/SwipeBody.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_Consumer/target/classes/org/example/Worker.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_Consumer/target/classes/org/example/Worker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_buildServer/.idea/Lab06_buildServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_buildServer/.idea/Lab06_buildServer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_buildServer/lab06/src/main/java/neu/cs6650/Client/TwinderClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_buildServer/lab06/src/main/java/neu/cs6650/Client/TwinderClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_buildServer/lab06/src/main/java/neu/cs6650/TwinderAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_buildServer/lab06/src/main/java/neu/cs6650/TwinderAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_buildServer/lab06/target/classes/neu/cs6650/Client/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_buildServer/lab06/target/classes/neu/cs6650/Client/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_buildServer/lab06/target/classes/neu/cs6650/Client/TwinderClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_buildServer/lab06/target/classes/neu/cs6650/Client/TwinderClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_buildServer/lab06/target/classes/neu/cs6650/TwinderAPI$ChannelFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_buildServer/lab06/target/classes/neu/cs6650/TwinderAPI$ChannelFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab06_buildServer/lab06/target/classes/neu/cs6650/TwinderAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab06_buildServer/lab06/target/classes/neu/cs6650/TwinderAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab07_Serverless/target/classes/neu/cs6650/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab07_Serverless/target/classes/neu/cs6650/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/neu/cs6650/RPCClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/neu/cs6650/RPCClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/neu/cs6650/RPCServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/neu/cs6650/RPCServer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
