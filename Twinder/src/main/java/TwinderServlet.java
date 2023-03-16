@@ -22,7 +22,7 @@ public class TwinderServlet extends HttpServlet {
     private static final String RPC_QUEUE_NAME = "rpc_queue";
     private static final String LOCALHOST = "localhost";
     private static GenericObjectPool<Channel> channelPool;
-    private static final boolean PRINT = true;
+    private static final boolean PRINT = false;
 
     private static Gson gson;
 
@@ -51,7 +51,9 @@ public class TwinderServlet extends HttpServlet {
 
         @Override
         public Channel create() throws Exception {
-            return connection.createChannel();
+            Channel newChannel = connection.createChannel();
+            newChannel.queueDeclare(RPC_QUEUE_NAME, false, false, false, null);
+            return newChannel;
         }
 
         @Override
@@ -147,10 +149,10 @@ public class TwinderServlet extends HttpServlet {
             }
             throw new RuntimeException(e);
         }
-
-        channel.queueDeclare(RPC_QUEUE_NAME, false, false, false, null);
+        // move the declare queue to init to speed up
+//        channel.queueDeclare(RPC_QUEUE_NAME, false, false, false, null);
 //        channel.queuePurge(RPC_QUEUE_NAME);
-        channel.basicQos(1);
+//        channel.basicQos(1);
         System.out.println(" [x] Awaiting RPC requests");
         String contentString = gson.fromJson(sBuilder.toString(), JSON.class).toString();
         if (PRINT) {

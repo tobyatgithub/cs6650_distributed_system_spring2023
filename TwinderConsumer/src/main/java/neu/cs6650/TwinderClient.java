@@ -10,10 +10,12 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
+// 20ms latency -> (50 req per thread -> 200 thread or more) -> 10k throughput;
+// 40ms latency -> 5k throughput. and 10k shall be achievable on ec2 deployed.
 public class TwinderClient {
-    private static final int NUM_OF_THREADS = 200;
-    private static final int NUM_OF_TASKS = 5000;
-    private static final boolean PRINT = true;
+    private static final int NUM_OF_THREADS = 400; // 1000
+    private static final int NUM_OF_TASKS = 50000; // 500_000
+    private static final boolean PRINT = false;
     private static final String CSV_FILENAME = "lab06_performance_(" + NUM_OF_THREADS + "_" + NUM_OF_TASKS + ").csv";
 
     static AtomicInteger failRequestCounter = new AtomicInteger(0);
