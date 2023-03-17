@@ -4,7 +4,7 @@
     <root id="archive" name="twinderConsumer.war">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="TwinderConsumer" />
+          <element id="module-output" name="TwinderClient" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: io.swagger:swagger-java-client:1.0.0" />

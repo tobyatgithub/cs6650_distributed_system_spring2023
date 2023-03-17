@@ -2,7 +2,6 @@
   <artifact type="exploded-war" name="Twinder:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/Twinder_war_exploded</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="Twinder/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="Twinder" />
@@ -23,6 +22,7 @@
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-simple:1.7.36" />
         </element>
       </element>
+      <element id="javaee-facet-resources" facet="Twinder/web/Web" />
     </root>
   </artifact>
 </component>

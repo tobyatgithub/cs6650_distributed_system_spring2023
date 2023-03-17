@@ -17,10 +17,11 @@ import org.apache.commons.pool2.impl.DefaultPooledObject;
 import org.apache.commons.pool2.impl.GenericObjectPool;
 
 // notice the name =... , value = ... is not necessary with mapping defined in web.xml
-@WebServlet(name = "TwinderServlet", value = "/TwinderServlet/*")
+@WebServlet()
 public class TwinderServlet extends HttpServlet {
     private static final String RPC_QUEUE_NAME = "rpc_queue";
     private static final String LOCALHOST = "localhost";
+    private static final String QUEUE_URL = "54.200.144.171";
     private static GenericObjectPool<Channel> channelPool;
     private static final boolean PRINT = false;
 
@@ -30,8 +31,12 @@ public class TwinderServlet extends HttpServlet {
     public void init() throws ServletException {
         super.init();
         gson = new Gson();
+        // comes with rabbitMQ different from channelFactory
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost(LOCALHOST);
+//        factory.setHost(QUEUE_URL);
+        factory.setUsername("admin");
+        factory.setPassword("admin");
         Connection connection;
         try {
             connection = factory.newConnection();
