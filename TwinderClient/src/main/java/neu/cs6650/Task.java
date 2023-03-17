@@ -27,7 +27,6 @@ public class Task implements Runnable {
         this.writer = writer;
     }
 
-
     @Override
     public void run() {
         long start = System.currentTimeMillis();

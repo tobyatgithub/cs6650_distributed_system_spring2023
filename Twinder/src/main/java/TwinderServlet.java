@@ -2,13 +2,13 @@ import com.google.gson.Gson;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
-import io.swagger.client.JSON;
 import io.swagger.client.model.SwipeDetails;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeoutException;
 
 import org.apache.commons.pool2.BasePooledObjectFactory;
@@ -23,7 +23,7 @@ public class TwinderServlet extends HttpServlet {
     private static final String LOCALHOST = "localhost";
     private static final String QUEUE_URL = "54.200.144.171";
     private static GenericObjectPool<Channel> channelPool;
-    private static final boolean PRINT = false;
+    private static final boolean DEBUG = false;
 
     private static Gson gson;
 
@@ -75,14 +75,13 @@ public class TwinderServlet extends HttpServlet {
         }
     }
 
-    private boolean urlIsValid(String urlPath, HttpServletResponse response) throws IOException {
+    private boolean urlIsValid(String[] urlParts, HttpServletResponse response) throws IOException {
         // expect: /swipe/{leftorright}/ = [, swipe, left]
-        String[] urlParts = urlPath.split("/");
 //        if (PRINT) {
 //            System.out.println("urlParts = " + Arrays.toString(urlParts));
 //            System.out.println(urlParts[1].matches("swipe"));
 //        }
-        if (urlPath.isEmpty()) {
+        if (urlParts.length == 0) {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             response.getWriter().write("empty link");
             return false;
@@ -94,7 +93,7 @@ public class TwinderServlet extends HttpServlet {
             response.getWriter().write("missing parameters!");
             return false;
         }
-        if (PRINT) {
+        if (DEBUG) {
             System.out.println("url validation passed.");
         }
         return true;
@@ -106,9 +105,14 @@ public class TwinderServlet extends HttpServlet {
             while ((line = request.getReader().readLine()) != null) {
                 sBuilder.append(line);
             }
+            // check whether this fromJson can run
             gson.fromJson(sBuilder.toString(), SwipeDetails.class);
-            response.setStatus(HttpServletResponse.SC_OK);
-            response.getWriter().write("Successfully passed json validation.");
+            if (DEBUG) {
+                System.out.println("Show the json:");
+                System.out.println(sBuilder.toString());
+            }
+//            response.setStatus(HttpServletResponse.SC_OK);
+//            response.getWriter().write("Successfully passed json validation.");
             return true;
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -123,8 +127,10 @@ public class TwinderServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/plain");
         String urlPath = request.getPathInfo();
-        if (!urlIsValid(urlPath, response)) {
+        String[] urlParts = urlPath.split("/");
+        if (!urlIsValid(urlParts, response)) {
             System.out.println("FAIL: didn't pass url validation.");
             return;
         }
@@ -139,43 +145,43 @@ public class TwinderServlet extends HttpServlet {
         response.setStatus(HttpServletResponse.SC_OK);
         response.getWriter().write("Successfully received a swipe.");
 
-        if (PRINT) {
+        if (DEBUG) {
             System.out.println("validation passed. response sent back, start channel work.");
         }
         Channel channel = null;
         try {
             channel = channelPool.borrowObject();
-            if (PRINT) {
+            if (DEBUG) {
                 System.out.println("channel borrowed from channel pool.");
             }
         } catch (Exception e) {
-            if (PRINT) {
+            if (DEBUG) {
                 System.out.println("channel borrow Failed.");
             }
             throw new RuntimeException(e);
         }
-        // move the declare queue to init to speed up
-//        channel.queueDeclare(RPC_QUEUE_NAME, false, false, false, null);
-//        channel.queuePurge(RPC_QUEUE_NAME);
-//        channel.basicQos(1);
         System.out.println(" [x] Awaiting RPC requests");
-        String contentString = gson.fromJson(sBuilder.toString(), JSON.class).toString();
-        if (PRINT) {
-            System.out.println("Gson finished, content string = " + contentString);
+
+        SwipeBody jBody = gson.fromJson(sBuilder.toString(), SwipeBody.class);
+        String leftOrRight = urlParts[2];
+        jBody.setLeftOrRight(leftOrRight);
+        String jsonMessage = jBody.toString(); // turn into json format
+        if (DEBUG) {
+            System.out.println("Gson finished, content string = " + jsonMessage);
         }
-        channel.basicPublish("", RPC_QUEUE_NAME, null, contentString.getBytes());
+        channel.basicPublish("", RPC_QUEUE_NAME, null, jsonMessage.getBytes(StandardCharsets.UTF_8));
         try {
             channelPool.returnObject(channel);
-            if (PRINT) {
+            if (DEBUG) {
                 System.out.println("Return channel success.");
             }
         } catch (Exception e) {
-            if (PRINT) {
+            if (DEBUG) {
                 System.out.println("Return channel failed.");
             }
             throw new RuntimeException(e);
         }
-        if (PRINT) {
+        if (DEBUG) {
             System.out.println("Success.\n\n");
         }
 //        Channel finalChannel = channel;

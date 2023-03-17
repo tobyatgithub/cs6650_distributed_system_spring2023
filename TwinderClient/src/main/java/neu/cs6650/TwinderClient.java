@@ -14,7 +14,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 // 40ms latency -> 5k throughput. and 10k shall be achievable on ec2 deployed.
 public class TwinderClient {
     private static final int NUM_OF_THREADS = 200; // 1000
-    private static final int NUM_OF_TASKS = 500; // 500_000
+    private static final int NUM_OF_TASKS = 5000; // 500_000
     private static final boolean PRINT = false;
     private static final String CSV_FILENAME = "lab06_performance_(" + NUM_OF_THREADS + "_" + NUM_OF_TASKS + ").csv";
 
