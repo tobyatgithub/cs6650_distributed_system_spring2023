@@ -32,14 +32,14 @@ public class TwinderServlet extends HttpServlet {
         super.init();
         gson = new Gson();
         // comes with rabbitMQ different from channelFactory
-        ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost(LOCALHOST);
-//        factory.setHost(QUEUE_URL);
-        factory.setUsername("admin");
-        factory.setPassword("admin");
+        ConnectionFactory rabbitConnectionFactory = new ConnectionFactory();
+        rabbitConnectionFactory.setHost(LOCALHOST);
+//        rabbitConnectionFactory.setHost(QUEUE_URL);
+        rabbitConnectionFactory.setUsername("admin");
+        rabbitConnectionFactory.setPassword("admin");
         Connection connection;
         try {
-            connection = factory.newConnection();
+            connection = rabbitConnectionFactory.newConnection();
             channelPool = new GenericObjectPool<>(new ChannelFactory(connection));
         } catch (TimeoutException | IOException e) {
             throw new ServletException(e);
@@ -47,9 +47,7 @@ public class TwinderServlet extends HttpServlet {
     }
 
     private static class ChannelFactory extends BasePooledObjectFactory<Channel> {
-
         private final Connection connection;
-
         public ChannelFactory(Connection connection) {
             this.connection = connection;
         }
@@ -77,10 +75,6 @@ public class TwinderServlet extends HttpServlet {
 
     private boolean urlIsValid(String[] urlParts, HttpServletResponse response) throws IOException {
         // expect: /swipe/{leftorright}/ = [, swipe, left]
-//        if (PRINT) {
-//            System.out.println("urlParts = " + Arrays.toString(urlParts));
-//            System.out.println(urlParts[1].matches("swipe"));
-//        }
         if (urlParts.length == 0) {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             response.getWriter().write("empty link");
@@ -109,10 +103,8 @@ public class TwinderServlet extends HttpServlet {
             gson.fromJson(sBuilder.toString(), SwipeDetails.class);
             if (DEBUG) {
                 System.out.println("Show the json:");
-                System.out.println(sBuilder.toString());
+                System.out.println(sBuilder);
             }
-//            response.setStatus(HttpServletResponse.SC_OK);
-//            response.getWriter().write("Successfully passed json validation.");
             return true;
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -120,13 +112,13 @@ public class TwinderServlet extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/plain");
         response.getWriter().write("It works!");
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/plain");
         String urlPath = request.getPathInfo();
         String[] urlParts = urlPath.split("/");
@@ -134,7 +126,6 @@ public class TwinderServlet extends HttpServlet {
             System.out.println("FAIL: didn't pass url validation.");
             return;
         }
-        // validate json
         StringBuilder sBuilder = new StringBuilder();
         if (!jsonIsValid(sBuilder, request, response)) {
             System.out.println("FAIL: didn't pass json validation.");
@@ -145,9 +136,6 @@ public class TwinderServlet extends HttpServlet {
         response.setStatus(HttpServletResponse.SC_OK);
         response.getWriter().write("Successfully received a swipe.");
 
-        if (DEBUG) {
-            System.out.println("validation passed. response sent back, start channel work.");
-        }
         Channel channel = null;
         try {
             channel = channelPool.borrowObject();
@@ -160,7 +148,9 @@ public class TwinderServlet extends HttpServlet {
             }
             throw new RuntimeException(e);
         }
-        System.out.println(" [x] Awaiting RPC requests");
+        if (DEBUG) {
+            System.out.println(" [x] Awaiting RPC requests");
+        }
 
         SwipeBody jBody = gson.fromJson(sBuilder.toString(), SwipeBody.class);
         String leftOrRight = urlParts[2];
@@ -177,32 +167,12 @@ public class TwinderServlet extends HttpServlet {
             }
         } catch (Exception e) {
             if (DEBUG) {
-                System.out.println("Return channel failed.");
+                System.out.println("Return channel fail.");
             }
             throw new RuntimeException(e);
         }
         if (DEBUG) {
             System.out.println("Success.\n\n");
         }
-//        Channel finalChannel = channel;
-//        DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-//            AMQP.BasicProperties replyProps = new AMQP.BasicProperties
-//                    .Builder()
-//                    .correlationId(delivery.getProperties().getCorrelationId())
-//                    .build();
-//
-//            String resultString = "";
-//            try {
-//                String message = new String(delivery.getBody(), "UTF-8");
-//                System.out.println("message: " + message + ")");
-//            } catch (Exception e) {
-//                System.out.println("error: " + e);
-//            } finally {
-//                finalChannel.basicPublish("", delivery.getProperties().getReplyTo(), replyProps, resultString.getBytes("UTF-8"));
-//                finalChannel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
-//            }
-//        };
-
-//        channel.basicConsume(RPC_QUEUE_NAME, false, deliverCallback, (consumerTag -> { }));
     }
 }

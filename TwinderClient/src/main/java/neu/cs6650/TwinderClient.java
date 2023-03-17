@@ -22,10 +22,8 @@ public class TwinderClient {
 //    static private final String url = "http://18.236.26.147:8080/lab06_war/TwinderAPI/";
     static private final String url = "http://localhost:8080/Twinder_war_exploded/Twinder/";
 //    static private final String url = "http://18.236.26.147:8080/Twinder_war/Twinder/";
-    // (500k,200) = 197741 ms; (1k, 1) = 49514 ms
+
     // static private String url = "http://54.184.114.172:8080/JavaServlet_war/twinder";
-    // nick's endpoint, 1-28-2023 working!
-    private int iterationNum;
     private static final ExecutorService executorService = Executors.newFixedThreadPool(NUM_OF_THREADS);
 
     public static void main(String[] args) throws IOException {

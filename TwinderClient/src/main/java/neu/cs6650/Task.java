@@ -40,14 +40,15 @@ public class Task implements Runnable {
         String randomSwipeeId = String.valueOf(new Random().nextInt(1000000 - 1) + 1);
 
         SwipeDetails body = new SwipeDetails(); // SwipeDetails | response details
-        body.setSwiper(randomSwiperId); // swiper
-        body.setSwipee(randomSwipeeId); // swipee
-        body.setComment("It happens to be: " + leftOrRight); // comment
+        body.setSwiper(randomSwiperId);
+        body.setSwipee(randomSwipeeId);
+        body.setComment("It happens to be: " + leftOrRight);
 
         int count = 0;
         int maxCount = 5;
         String statusCode = "404";
-        while (true) { // maybe retry, or for loop
+        // retry maxCount of times before give up.
+        while (true) {
             try {
                 ApiResponse<Void> response = apiInstance.swipeWithHttpInfo(body, leftOrRight);
                 statusCode = String.valueOf(response.getStatusCode());

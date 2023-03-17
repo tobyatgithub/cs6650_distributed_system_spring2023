@@ -7,26 +7,26 @@ import java.util.ArrayList;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.google.gson.Gson;
-import io.swagger.client.model.SwipeDetails;
+
 public class Worker implements Runnable {
     private final Connection connection;
     private final String queueName;
     private final ConcurrentHashMap<Integer, ArrayList<Integer>> concurrentHashMap;
     private final int qos;
-    private final boolean PRINT;
+    private final boolean DEBUG;
     private final Gson gson;
 
-    public Worker(Connection connection, String queueName, ConcurrentHashMap<Integer, ArrayList<Integer>> concurrentHashMap, int qos, boolean PRINT) {
+    public Worker(Connection connection, String queueName, ConcurrentHashMap<Integer, ArrayList<Integer>> concurrentHashMap, int qos, boolean DEBUG) {
         this.connection = connection;
         this.queueName = queueName;
         this.concurrentHashMap =concurrentHashMap;
         this.qos = qos;
-        this.PRINT = PRINT;
+        this.DEBUG = DEBUG;
         this.gson = new Gson();
     }
 
-    public Worker(Connection connection, String queueName, ConcurrentHashMap<Integer, ArrayList<Integer>> concurrentHashMap, boolean PRINT) {
-        this(connection, queueName, concurrentHashMap ,1, PRINT);
+    public Worker(Connection connection, String queueName, ConcurrentHashMap<Integer, ArrayList<Integer>> concurrentHashMap, boolean DEBUG) {
+        this(connection, queueName, concurrentHashMap ,1, DEBUG);
     }
     @Override
     public void run() {
@@ -37,7 +37,7 @@ public class Worker implements Runnable {
             channel.basicQos(this.qos);
             DeliverCallback deliverCallback = (consumerTag, delivery) -> {
                 String message = new String(delivery.getBody(), StandardCharsets.UTF_8);
-                if (PRINT) {
+                if (DEBUG) {
                     System.out.println(" [x] Received message:'" + message + "'");
                 }
                 doWork(message);
@@ -51,12 +51,13 @@ public class Worker implements Runnable {
     }
 
     private void doWork(String message) {
-        if (PRINT) {
+        if (DEBUG) {
             System.out.println("do work! with message:");
             System.out.println(message);
         }
         SwipeBody jBody = gson.fromJson(message, SwipeBody.class);
-        if (PRINT) {
+        // TODO: add info to the concurrentHashMap
+        if (DEBUG) {
             System.out.println("toby here:");
             System.out.println(jBody + "\n");
         }
