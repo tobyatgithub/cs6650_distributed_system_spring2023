@@ -8,6 +8,8 @@ public class jdbcJava {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection connection = DriverManager.getConnection(url, username, passWord);
 
+        insertDate(connection, 10, "test", "test@toby.com", 99);
+
         Statement statement = connection.createStatement();
         String query = "select * from users;";
         ResultSet result = statement.executeQuery(query);
@@ -18,4 +20,25 @@ public class jdbcJava {
         statement.close();
         connection.close();
     }
+
+    private static void insertDate(Connection connection, int id, String name, String email, int age) throws SQLException {
+
+        System.out.println("OK. Let's test.");
+
+        PreparedStatement preparedStatement = null;
+        String insertQueryStatement = "INSERT INTO users (id, name, email, age) " +
+                "VALUES (?,?,?,?)";
+            preparedStatement = connection.prepareStatement(insertQueryStatement);
+            preparedStatement.setInt(1, id);
+            preparedStatement.setString(2, name);
+            preparedStatement.setString(3, email);
+            preparedStatement.setInt(4, age);
+
+            // execute insert SQL statement
+            preparedStatement.executeUpdate();
+
+
+    }
+
+
 }
