@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1477cbd3-603d-438a-bfe1-6856811245a2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Twinder/src/main/java/TwinderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Twinder/src/main/java/TwinderServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Twinder/target/classes/SwipeBody.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Twinder/target/classes/SwipeBody.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Twinder/target/classes/TwinderServlet$ChannelFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Twinder/target/classes/TwinderServlet$ChannelFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Twinder/target/classes/TwinderServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Twinder/target/classes/TwinderServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TwinderClient/target/classes/neu/cs6650/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/../TwinderClient/target/classes/neu/cs6650/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TwinderClient/target/classes/neu/cs6650/TwinderClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../TwinderClient/target/classes/neu/cs6650/TwinderClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Consumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Consumer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SwipeBody.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SwipeBody.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Worker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Worker.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
