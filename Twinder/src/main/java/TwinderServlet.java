@@ -9,6 +9,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.sql.*;
 import java.util.concurrent.TimeoutException;
 
 import org.apache.commons.pool2.BasePooledObjectFactory;
@@ -24,7 +25,7 @@ public class TwinderServlet extends HttpServlet {
     private static final String QUEUE_URL = "54.200.144.171";
     private static GenericObjectPool<Channel> channelPool;
     private static final boolean DEBUG = false;
-
+    private static java.sql.Connection DbConnection;
     private static Gson gson;
 
     @Override
@@ -38,12 +39,25 @@ public class TwinderServlet extends HttpServlet {
         rabbitConnectionFactory.setUsername("admin");
         rabbitConnectionFactory.setPassword("admin");
         Connection connection;
+
         try {
             connection = rabbitConnectionFactory.newConnection();
             channelPool = new GenericObjectPool<>(new ChannelFactory(connection));
         } catch (TimeoutException | IOException e) {
             throw new ServletException(e);
         }
+
+        try {
+            String DbUrl = "jdbc:mysql://localhost:3306/Twinder";
+            String username = "root";
+            String passWord = "";
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            DbConnection = DriverManager.getConnection(DbUrl, username, passWord);
+        } catch (ClassNotFoundException | SQLException e) {
+            System.out.println("db connect failed.");
+            throw new RuntimeException(e);
+        }
+
     }
 
     private static class ChannelFactory extends BasePooledObjectFactory<Channel> {
@@ -93,15 +107,6 @@ public class TwinderServlet extends HttpServlet {
         return true;
     }
 
-    /**
-     * @param urlParts: expect /matches/userID = [, matches, userID]
-     * @return boolean: whether the getURL is valid or not
-     */
-    private boolean getUrlIsValid(String[] urlParts) {
-        if (urlParts.length < 3) return false;
-        return urlParts[1].matches("matches") && urlParts[2].matches("-?\\d+(\\.\\d+)?");
-    }
-
     private boolean jsonIsValid(StringBuilder sBuilder, HttpServletRequest request, HttpServletResponse response) throws IOException {
         String line;
         try {
@@ -125,12 +130,48 @@ public class TwinderServlet extends HttpServlet {
         response.setContentType("text/plain");
         String urlPath = request.getPathInfo();
         String[] urlParts = urlPath.split("/");
-        if (!getUrlIsValid(urlParts)) {
+        if (urlParts.length < 3 || !urlParts[2].matches("-?\\d+(\\.\\d+)?")) {
             response.getWriter().write("Invalid get url. Reject.");
             return;
         }
-        response.getWriter().write("doGet successfully received!");
+
+        int userID = Integer.parseInt(urlParts[2]);
+        if (urlParts[1].matches("matches") && urlParts[2].matches("-?\\d+(\\.\\d+)?")) {
+            response.getWriter().write("doGet for match successfully received!");
+            try {
+                getMatchData(userID);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        } else if (urlParts[1].matches("stats") && urlParts[2].matches("-?\\d+(\\.\\d+)?")) {
+            response.getWriter().write("doGet for stats successfully received!");
+//            TwinderStatsData statsData = getStatsData(userID);
+        } else {
+            response.getWriter().write("Invalid get url. Reject.");
+            return;
+        }
+
+        String dsa = "well";
     }
+
+//    private TwinderMatchData getMatchData(int userID) throws SQLException {
+    private void getMatchData(int userID) throws SQLException {
+        Statement statement = DbConnection.createStatement();
+        PreparedStatement preparedStatement = null;
+        String insertQueryStatement = "SELECT * FROM MatchData WHERE userID = ?";
+        preparedStatement = DbConnection.prepareStatement(insertQueryStatement);
+        preparedStatement.setInt(1, userID);
+        ResultSet result = statement.executeQuery(insertQueryStatement);
+        while(result.next()){
+            System.out.println(result.getInt(1) + "," + result.getString(2));
+            System.out.println(result.getString(3) + "," + result.getInt(4));
+        }
+    }
+
+//    private TwinderStatsData getStatsData(int userID) {
+//    }
+
+
 
 
     @Override
@@ -169,6 +210,7 @@ public class TwinderServlet extends HttpServlet {
         }
 
         SwipeBody jBody = gson.fromJson(sBuilder.toString(), SwipeBody.class);
+        System.out.println(jBody);
         String leftOrRight = urlParts[2];
         jBody.setLeftOrRight(leftOrRight);
         String jsonMessage = jBody.toString(); // turn into json format

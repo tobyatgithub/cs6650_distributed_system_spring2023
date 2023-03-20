@@ -12,4 +12,9 @@
         <servlet-name>TwinderServlet</servlet-name>
         <url-pattern>/Twinder/*</url-pattern>
     </servlet-mapping>
+
+    <resource-env-ref>
+        <resource-env-ref-name>jdbc/Twinder</resource-env-ref-name>
+        <resource-env-ref-type>javax.sql.DataSource</resource-env-ref-type>
+    </resource-env-ref>
 </web-app>

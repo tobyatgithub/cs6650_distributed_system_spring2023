@@ -3,6 +3,11 @@
     <output-path>$PROJECT_DIR$/out/artifacts/Twinder_war</output-path>
     <root id="archive" name="Twinder_war.war">
       <element id="artifact" artifact-name="Twinder:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mysql-connector-j-8.0.32" />
+        </element>
+      </element>
     </root>
   </artifact>
 </component>
