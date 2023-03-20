@@ -21,21 +21,29 @@ import org.apache.commons.pool2.impl.GenericObjectPool;
 @WebServlet()
 public class TwinderServlet extends HttpServlet {
     private static final String RPC_QUEUE_NAME = "rpc_queue";
-    private static final String LOCALHOST = "localhost";
-    private static final String QUEUE_URL = "54.200.144.171";
+    private static final String LOCAL_QUEUE_URL = "localhost";
+    private static final String AWS_QUEUE_URL = "54.200.144.171";
     private static GenericObjectPool<Channel> channelPool;
     private static final boolean DEBUG = false;
     private static java.sql.Connection DbConnection;
     private static Gson gson;
 
+    /**
+     * Init several stuffs:
+     * - Gson object
+     * - rabbitQueue connection factory
+     * - channel pool for rabbitQueue connections
+     * - connection to Twinder sql database
+     * @throws ServletException
+     */
     @Override
     public void init() throws ServletException {
         super.init();
         gson = new Gson();
         // comes with rabbitMQ different from channelFactory
         ConnectionFactory rabbitConnectionFactory = new ConnectionFactory();
-        rabbitConnectionFactory.setHost(LOCALHOST);
-//        rabbitConnectionFactory.setHost(QUEUE_URL);
+        rabbitConnectionFactory.setHost(LOCAL_QUEUE_URL);
+//        rabbitConnectionFactory.setHost(AWS_QUEUE_URL);
         rabbitConnectionFactory.setUsername("admin");
         rabbitConnectionFactory.setPassword("admin");
         Connection connection;
@@ -87,8 +95,14 @@ public class TwinderServlet extends HttpServlet {
         }
     }
 
+    /**
+     * Check whether the post url is legal.
+     * @param urlParts string of array, expect /swipe/{left_or_right}/ = [, swipe, left]
+     * @param response HttpServletResponse object
+     * @return boolean on whether the url is valid
+     * @throws IOException
+     */
     private boolean postUrlIsValid(String[] urlParts, HttpServletResponse response) throws IOException {
-        // expect: /swipe/{leftorright}/ = [, swipe, left]
         if (urlParts.length == 0) {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             response.getWriter().write("empty link");
@@ -171,9 +185,6 @@ public class TwinderServlet extends HttpServlet {
 //    private TwinderStatsData getStatsData(int userID) {
 //    }
 
-
-
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/plain");
@@ -210,7 +221,6 @@ public class TwinderServlet extends HttpServlet {
         }
 
         SwipeBody jBody = gson.fromJson(sBuilder.toString(), SwipeBody.class);
-        System.out.println(jBody);
         String leftOrRight = urlParts[2];
         jBody.setLeftOrRight(leftOrRight);
         String jsonMessage = jBody.toString(); // turn into json format
@@ -219,8 +229,15 @@ public class TwinderServlet extends HttpServlet {
         }
         channel.basicPublish("", RPC_QUEUE_NAME, null, jsonMessage.getBytes(StandardCharsets.UTF_8));
         try {
+            insertSwipeEvent2Db(jBody);
+        } catch (SQLException e) {
+            System.out.println("insert swipeEvent to database failed.");
+            throw new RuntimeException(e);
+        }
+        try {
             channelPool.returnObject(channel);
             if (DEBUG) {
+                System.out.println(jBody);
                 System.out.println("Return channel success.");
             }
         } catch (Exception e) {
@@ -232,5 +249,30 @@ public class TwinderServlet extends HttpServlet {
         if (DEBUG) {
             System.out.println("Success.\n\n");
         }
+    }
+
+    /**
+     * Insert the swipe event data into the Twinder.SwipeEvent database
+     * @param swipeBody [id, swiper, swipee, comment, left_or_right, create_at]
+     * @throws SQLException
+     */
+    private void insertSwipeEvent2Db(SwipeBody swipeBody) throws SQLException {
+        if (DEBUG) {
+            System.out.println(swipeBody);
+        }
+        String insertQueryStatement = "INSERT INTO SwipeEvent (swiper, swipee, comment, left_or_right) " +
+                "VALUES (?,?,?,?)";
+        PreparedStatement preparedStatement = DbConnection.prepareStatement(insertQueryStatement);
+        preparedStatement.setInt(1, swipeBody.getSwiper());
+        preparedStatement.setInt(2, swipeBody.getSwipee());
+        preparedStatement.setString(3, swipeBody.getComment());
+        preparedStatement.setString(4, swipeBody.getLeftOrRight());
+        preparedStatement.executeUpdate();
+
+        if (DEBUG) {
+            System.out.println("insert Swipe Event success.");
+        }
+        return;
+
     }
 }
