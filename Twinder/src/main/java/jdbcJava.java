@@ -8,7 +8,7 @@ public class jdbcJava {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection connection = DriverManager.getConnection(url, username, passWord);
 
-        insertDate(connection, 10, "test", "test@toby.com", 99);
+        testInsertDate(connection, 10, "test", "test@toby.com", 99);
 
         Statement statement = connection.createStatement();
         String query = "select * from users;";
@@ -21,8 +21,7 @@ public class jdbcJava {
         connection.close();
     }
 
-    private static void insertDate(Connection connection, int id, String name, String email, int age) throws SQLException {
-
+    private static void testInsertDate(Connection connection, int id, String name, String email, int age) throws SQLException {
         System.out.println("OK. Let's test.");
 
         PreparedStatement preparedStatement = null;

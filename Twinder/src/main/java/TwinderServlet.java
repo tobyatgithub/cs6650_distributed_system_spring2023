@@ -73,7 +73,7 @@ public class TwinderServlet extends HttpServlet {
         }
     }
 
-    private boolean urlIsValid(String[] urlParts, HttpServletResponse response) throws IOException {
+    private boolean postUrlIsValid(String[] urlParts, HttpServletResponse response) throws IOException {
         // expect: /swipe/{leftorright}/ = [, swipe, left]
         if (urlParts.length == 0) {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
@@ -91,6 +91,15 @@ public class TwinderServlet extends HttpServlet {
             System.out.println("url validation passed.");
         }
         return true;
+    }
+
+    /**
+     * @param urlParts: expect /matches/userID = [, matches, userID]
+     * @return boolean: whether the getURL is valid or not
+     */
+    private boolean getUrlIsValid(String[] urlParts) {
+        if (urlParts.length < 3) return false;
+        return urlParts[1].matches("matches") && urlParts[2].matches("-?\\d+(\\.\\d+)?");
     }
 
     private boolean jsonIsValid(StringBuilder sBuilder, HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -114,15 +123,22 @@ public class TwinderServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/plain");
-        response.getWriter().write("It works!");
+        String urlPath = request.getPathInfo();
+        String[] urlParts = urlPath.split("/");
+        if (!getUrlIsValid(urlParts)) {
+            response.getWriter().write("Invalid get url. Reject.");
+            return;
+        }
+        response.getWriter().write("doGet successfully received!");
     }
+
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/plain");
         String urlPath = request.getPathInfo();
         String[] urlParts = urlPath.split("/");
-        if (!urlIsValid(urlParts, response)) {
+        if (!postUrlIsValid(urlParts, response)) {
             System.out.println("FAIL: didn't pass url validation.");
             return;
         }
