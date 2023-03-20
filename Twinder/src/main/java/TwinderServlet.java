@@ -272,7 +272,5 @@ public class TwinderServlet extends HttpServlet {
         if (DEBUG) {
             System.out.println("insert Swipe Event success.");
         }
-        return;
-
     }
 }

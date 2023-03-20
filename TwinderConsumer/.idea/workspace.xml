@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1477cbd3-603d-438a-bfe1-6856811245a2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Twinder/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Twinder/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Twinder/src/main/java/TwinderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Twinder/src/main/java/TwinderServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Twinder/target/classes/TwinderServlet$ChannelFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Twinder/target/classes/TwinderServlet$ChannelFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Twinder/target/classes/TwinderServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Twinder/target/classes/TwinderServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Twinder/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Twinder/web/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
