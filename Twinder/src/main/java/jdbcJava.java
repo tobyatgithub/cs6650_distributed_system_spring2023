@@ -1,5 +1,4 @@
 import java.sql.*;
-
 public class jdbcJava {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         String url = "jdbc:mysql://localhost:3306/sample";
@@ -23,7 +22,6 @@ public class jdbcJava {
 
     private static void testInsertDate(Connection connection, int id, String name, String email, int age) throws SQLException {
         System.out.println("OK. Let's test.");
-
         PreparedStatement preparedStatement = null;
         String insertQueryStatement = "INSERT INTO users (id, name, email, age) " +
                 "VALUES (?,?,?,?)";
@@ -32,12 +30,6 @@ public class jdbcJava {
             preparedStatement.setString(2, name);
             preparedStatement.setString(3, email);
             preparedStatement.setInt(4, age);
-
-            // execute insert SQL statement
             preparedStatement.executeUpdate();
-
-
     }
-
-
 }

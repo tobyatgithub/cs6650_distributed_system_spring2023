@@ -14,20 +14,26 @@ public class Worker implements Runnable {
     private final ConcurrentHashMap<Integer, ArrayList<Integer>> concurrentHashMap;
     private final int qos;
     private final boolean DEBUG;
+    private final java.sql.Connection dbConnection;
     private final Gson gson;
 
-    public Worker(Connection connection, String queueName, ConcurrentHashMap<Integer, ArrayList<Integer>> concurrentHashMap, int qos, boolean DEBUG) {
+    public Worker(Connection connection, String queueName, ConcurrentHashMap<Integer, ArrayList<Integer>> concurrentHashMap,
+                  int qos, boolean DEBUG, java.sql.Connection dbConnection) {
         this.connection = connection;
         this.queueName = queueName;
-        this.concurrentHashMap =concurrentHashMap;
+        this.concurrentHashMap = concurrentHashMap;
         this.qos = qos;
         this.DEBUG = DEBUG;
+        this.dbConnection = dbConnection;
+
         this.gson = new Gson();
     }
 
-    public Worker(Connection connection, String queueName, ConcurrentHashMap<Integer, ArrayList<Integer>> concurrentHashMap, boolean DEBUG) {
-        this(connection, queueName, concurrentHashMap ,1, DEBUG);
+    public Worker(Connection connection, String queueName, ConcurrentHashMap<Integer, ArrayList<Integer>> concurrentHashMap,
+                  boolean DEBUG, java.sql.Connection dbConnection) {
+        this(connection, queueName, concurrentHashMap, 1, DEBUG, dbConnection);
     }
+
     @Override
     public void run() {
         try {
@@ -43,20 +49,30 @@ public class Worker implements Runnable {
                 doWork(message);
                 channel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
             };
-            channel.basicConsume(this.queueName, false, deliverCallback, consumerTag->{});
+            channel.basicConsume(this.queueName, false, deliverCallback, consumerTag -> {
+            });
         } catch (Exception e) {
             System.out.println("FAIL in run: \n");
             System.out.println(e);
         }
     }
 
+    /**
+     * Do the actual work where we:
+     * 1. grab the SwipeBody object from the queue
+     * 2. update the database
+     * @param message a json format SwipeBody string
+     */
     private void doWork(String message) {
         if (DEBUG) {
             System.out.println("do work! with message:");
             System.out.println(message);
         }
         SwipeBody jBody = gson.fromJson(message, SwipeBody.class);
+
         // TODO: add info to the concurrentHashMap
+        // TODO: update database
+
         if (DEBUG) {
             System.out.println("toby here:");
             System.out.println(jBody + "\n");
